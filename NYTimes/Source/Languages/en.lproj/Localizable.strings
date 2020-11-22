@@ -1,0 +1,8 @@
+
+/**
+ "key" : "value"
+ */
+"noInternet" = "Check your internet connection.";
+"connectionTimeout" = "Check your internet connection.";
+"something_went_wrong" = "Something went wrong, please try again later.";
+"serverUnreachable" = "An error has occured, please try again.";

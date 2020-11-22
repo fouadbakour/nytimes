@@ -1,0 +1,15 @@
+//
+//  ReleaseConfig.xcconfig
+//  NYTimes
+//
+//  Created by Fouad Bakour on 11/21/20.
+//  Copyright (c) 2020 Eurisko Mobility. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+BASE_URL = https:$()/$()/api.nytimes.com
+API_KEY = Rk6GfVjL9XA3A5ipo7bjr2fNh80CpeA5
+
