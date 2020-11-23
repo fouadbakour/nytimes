@@ -12,11 +12,10 @@ extension APIManager {
 
     /// Get NYTimes based on selected section & period
     /// - Parameters:
-    ///   - section: Section Enum
     ///   - period: Period Enum
     ///   - completion: (_ error:String?, _ data:[ResultModel]?)
-    func getNews(section:NewsSection, period:NewsPeriod, completion: @escaping (_ error:String?, _ data:[ResultModel]?) -> Void) {
-        let endPoint = APIEndPoints.mostviewed(section: section, period: period)
+    func getNews(period:NewsPeriod, completion: @escaping (_ error:String?, _ data:[ResultModel]?) -> Void) {
+        let endPoint = APIEndPoints.mostviewed(period: period)
         self.makeHttpRequest(endPoint: endPoint, httpMethod: .get, parameters: nil, headers: nil) { (resp) in
             if resp.status! == .success {
                 if let data = resp.data {

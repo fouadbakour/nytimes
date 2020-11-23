@@ -22,8 +22,7 @@ extension HomeViewController: UICollectionViewDataSource {
         
         // By line & Date
         let byLine = item.byline ?? ""
-        let date = (item.publishedDate ?? "").toDate()?.date ?? Date()
-        let dateStr = date.toFormat(MyApp_DateFormats.EEMMMddyyyy.rawValue)
+        let dateStr = item.publishedDate ?? ""
         let attr = UIConstructor.buildAttrStrings((text: byLine + " " + translate("on") + " ", color: .lightGray, font: UIFont.systemFont(ofSize: 15)),
                                        (text: dateStr, color: .lightGray, font: UIFont.systemFont(ofSize: 15)))
         cell.byAndDateLabel?.attributedText = attr

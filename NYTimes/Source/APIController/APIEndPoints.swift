@@ -8,7 +8,7 @@
 
 // MARK API Endpoints
 struct APIEndPoints {
-    static func mostviewed(section:NewsSection, period:NewsPeriod) -> String {
-        return "/svc/mostpopular/v2/mostviewed/\(section.rawValue)/\(period.rawValue)"
+    static func mostviewed(period:NewsPeriod) -> String {
+        return "/svc/mostpopular/v2/viewed/\(period.rawValue)"
     }
 }

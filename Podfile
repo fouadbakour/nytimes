@@ -3,14 +3,9 @@ platform :ios, '13.0'
 #Shared Pods for NYTimes
 def shared_pods
   pod 'RxSwift'
-  pod 'RxCocoa'
   pod 'ReachabilitySwift'
   pod 'Kingfisher'
-  pod 'SwiftDate'
-  pod 'SwiftyJSON'
-  pod 'Spruce'
   pod 'FuntastyKit'
-  pod 'Localize-Swift'
   pod 'appstore-card-transition'
 end
 

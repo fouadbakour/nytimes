@@ -59,6 +59,18 @@ final class DetailsViewController: BaseViewController {
         }
     }
     
+    /// This variable is used to: handle the close view button
+    @IBOutlet weak var closeButton:UIButton! {
+        didSet {
+            self.closeButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            self.closeButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+            self.closeButton.layer.shadowOpacity = 1.0
+            self.closeButton.layer.shadowRadius = 3.0
+            self.closeButton.layer.masksToBounds = false
+            self.closeButton.addTarget(self, action: #selector(self.closeView), for: .touchUpInside)
+        }
+    }
+    
     // MARK: - Vars / Values
     
     /// This variable is used to: hold a passed value from the coordinator
@@ -112,7 +124,16 @@ final class DetailsViewController: BaseViewController {
         if let details = self.details {
             self.detailsLabel.text = details
         }
-        heightConstraint.constant = UIScreen.main.bounds.width * 1.272 - 16.0
+        heightConstraint.constant = UIScreen.main.bounds.width * Constants.cardHeight - 16.0
+    }
+    
+    // MARK: - Close View
+    @objc func closeView() {
+        UIView.animate(withDuration: 0.1) {
+            self.closeButton.alpha = 0
+        } completion: { (done) in
+            self.dismiss(animated: true) {}
+        }
     }
 }
 

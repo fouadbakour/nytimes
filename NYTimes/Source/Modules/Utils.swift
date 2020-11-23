@@ -76,35 +76,4 @@ class Utils: NSObject {
         topView.present(alert, animated: true, completion: nil)
     }
         
-    /// This func will show the native share action sheet
-    /// - Parameters:
-    ///   - sender: the sender view e.g: UIButton
-    ///   - text: the share text
-    ///   - link: the share link
-    ///   - delegate: the VC
-    static func shareAction(sender: AnyObject? = nil, withText text: String,withLink link: String , withDelegate delegate: UIViewController) {
-        
-        let objectsToShare = [text ,link] as [Any]
-        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-        if let senderView = sender {
-            activityVC.popoverPresentationController?.sourceView = senderView as? UIView
-        }
-        activityVC.excludedActivityTypes = [UIActivity.ActivityType.copyToPasteboard,UIActivity.ActivityType.addToReadingList,UIActivity.ActivityType.assignToContact,UIActivity.ActivityType.print]
-        
-        delegate.present(activityVC, animated: true, completion: nil)
-    }
-    
-
-    /// This func will tell if ur app is running on iPad or not
-    /// - Returns: boolean
-    static func isIPAD() -> Bool {
-        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad) {
-               // Ipad
-            return true
-        } else {
-              // Iphone
-            return false
-        }
-    }
-
 }

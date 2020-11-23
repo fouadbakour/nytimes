@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Spruce
 
 extension UICollectionView {
     func setRefreshcontrol(color:UIColor = .darkGray, target:UIViewController, action:Selector)  {
@@ -15,39 +14,6 @@ extension UICollectionView {
         refreshControl.tintColor = color
         refreshControl.addTarget(target, action: action, for: .valueChanged)
         self.refreshControl = refreshControl
-    }
-    func reloadDataAnimated() {
-        
-        self.isHidden = true
-        DispatchQueue.main.async {
-            self.reloadData()
-            Utils.delay(delay: 0.3) {
-                self.isHidden = false
-                self.spruce.animate([.slide(.down, .severely), .fadeIn], animationType: SpringAnimation(duration: 1.0), sortFunction: CorneredSortFunction(corner: .topLeft, interObjectDelay: 0.08))
-            }
-        }
-    }
-    func reloadDataAnimated2() {
-        
-        self.isHidden = true
-        DispatchQueue.main.async {
-            self.reloadData()
-            Utils.delay(delay: 0.3) {
-                self.isHidden = false
-                self.spruce.animate([.slide(.down, .severely), .expand(.severely)], animationType: SpringAnimation(duration: 1.0), sortFunction: CorneredSortFunction(corner: .topLeft, interObjectDelay: 0.08))
-            }
-        }
-    }
-    func reloadDataAnimated3() {
-        
-        self.isHidden = true
-        DispatchQueue.main.async {
-            self.reloadData()
-            Utils.delay(delay: 0.3) {
-                self.isHidden = false
-                self.spruce.animate([.slide(.up, .severely), .contract(.severely)], animationType: SpringAnimation(duration: 1.0), sortFunction: CorneredSortFunction(corner: .topRight, interObjectDelay: 0.08))
-            }
-        }
     }
     func endRefreshing() {
         self.contentOffset = CGPoint.init(x: 0, y: 0)

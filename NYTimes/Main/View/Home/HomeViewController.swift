@@ -22,7 +22,7 @@ final class HomeViewController: BaseViewController, ViewControllerProtocol {
             self.collectionView.backgroundColor = .clear
             self.collectionView.setRefreshcontrol(color: .white, target: self, action: #selector(self.refreshData))
             let layout = (collectionView.collectionViewLayout as! UICollectionViewFlowLayout)
-            let aspect: CGFloat = 1.272
+            let aspect: CGFloat = Constants.cardHeight
             let width = UIScreen.main.bounds.width
             layout.itemSize = CGSize(width:width, height: width * aspect)
             layout.minimumLineSpacing = 0
@@ -113,7 +113,7 @@ final class HomeViewController: BaseViewController, ViewControllerProtocol {
             .reloadAnimated
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { (reloadAnimated) in
-                reloadAnimated ? self.collectionView.reloadDataAnimated() : self.collectionView.reloadAsync()
+                self.collectionView.reloadAsync()
             }, onError: { (error) in}, onCompleted: {}) {}
             .disposed(by: disposeBag)
     }

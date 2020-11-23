@@ -6,62 +6,31 @@ PODS:
   - Kingfisher (5.15.7):
     - Kingfisher/Core (= 5.15.7)
   - Kingfisher/Core (5.15.7)
-  - Localize-Swift (3.2.0):
-    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
-    - Localize-Swift/UIKit (= 3.2.0)
-  - Localize-Swift/LocalizeSwiftCore (3.2.0)
-  - Localize-Swift/UIKit (3.2.0):
-    - Localize-Swift/LocalizeSwiftCore
   - ReachabilitySwift (5.0.0)
-  - RxCocoa (5.1.1):
-    - RxRelay (~> 5)
-    - RxSwift (~> 5)
-  - RxRelay (5.1.1):
-    - RxSwift (~> 5)
   - RxSwift (5.1.1)
-  - Spruce (2.2.0)
-  - SwiftDate (6.3.0)
-  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - appstore-card-transition
   - FuntastyKit
   - Kingfisher
-  - Localize-Swift
   - ReachabilitySwift
-  - RxCocoa
   - RxSwift
-  - Spruce
-  - SwiftDate
-  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
     - appstore-card-transition
     - FuntastyKit
     - Kingfisher
-    - Localize-Swift
     - ReachabilitySwift
-    - RxCocoa
-    - RxRelay
     - RxSwift
-    - Spruce
-    - SwiftDate
-    - SwiftyJSON
 
 SPEC CHECKSUMS:
   appstore-card-transition: 660c136cb8a0f0004b2e99e99f1305bfa041f05c
   FuntastyKit: b39acdc476f66f5f6f71a1cfc37d8ab281bc2755
   Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
-  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
-  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
-  Spruce: 8456e4ab61ec6fd045e77dfcf07916e2e89f24d9
-  SwiftDate: ec6c0e173627a3ae6dd1671888a7f175956ebb94
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 40e87537277b813fdb8b3e1f8984b852c396a7f1
+PODFILE CHECKSUM: 90a7275243fdc7e30aa3eda0b9aec4051def8323
 
 COCOAPODS: 1.10.0

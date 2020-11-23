@@ -58,7 +58,7 @@ final class HomeViewModel: ViewModelProtocol {
              Fetch news data, cache them and reload
              */
             Utils.delay(delay: delayValue) {
-                Services.getNews(section: .all, period: .thirtyDays) { (error, data) in
+                Services.getNews(period: .thirtyDays) { (error, data) in
                     self.loading.onNext(false)
                     if error == nil {
                         self.data.onNext(data ?? [])

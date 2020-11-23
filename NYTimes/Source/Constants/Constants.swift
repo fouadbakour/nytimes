@@ -27,9 +27,10 @@ var coreapi = APIConfig.shared
 //******************** End of Public Usage ********************//
 
 public func translate(_ key:String) -> String {
-    return key.localized()
+    return NSLocalizedString(key, comment: "")
 }
 
 struct Constants {
     static let appLaunchAnimation:TimeInterval = 0.3
+    static let cardHeight:CGFloat = 1.100
 }

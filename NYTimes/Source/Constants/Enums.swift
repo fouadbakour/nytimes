@@ -18,9 +18,3 @@ enum NewsPeriod: String {
     case oneDay = "1.json"
     case thirtyDays = "30.json"
 }
-
-/// News sections values
-enum NewsSection: String {
-    case all = "all-sections"
-}
-
