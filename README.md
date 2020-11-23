@@ -25,12 +25,8 @@
 
 ```ruby
 pod 'RxSwift'
-pod 'RxCocoa'
 pod 'ReachabilitySwift'
 pod 'Kingfisher'
-pod 'SwiftDate'
-pod 'SwiftyJSON'
-pod 'Spruce'
 pod 'FuntastyKit'
 pod 'appstore-card-transition'
 ```
